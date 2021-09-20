@@ -20,6 +20,9 @@ int devision(int dividend, int divisor){
         printf("error: result out of range");
         return 0;
     }
+    if (dividend == 0x80000000 && divisor == 1) {
+        return 0x80000000;
+    }
     int negative = 2;
     if (dividend > 0) {
         --negative;
